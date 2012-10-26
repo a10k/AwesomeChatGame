@@ -19,10 +19,6 @@ html
             cookie     : true, // 
             xfbml      : true  // 
           });
-          //for wall post on start up
-          FB.ui({ 
-            method: 'feed' 
-          });
           //for user details
           FB.api('/me', function(user) {
             if (user) {
@@ -31,6 +27,10 @@ html
               var name = document.getElementById('name');
               name.innerHTML = user.name
             }
+          });
+          //for wall post on start up
+          FB.ui({ 
+            method: 'feed' 
           });
         };
         // Load the SDK Asynchronously
