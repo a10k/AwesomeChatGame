@@ -1,7 +1,7 @@
 {
   "name": "awesomeChat",
   "description": "awesome chat game",
-  "version": "0.1",
+  "version": "0.1.0",
   "homepage": "http://a10k.github.com",
   "author": "a10k",
   "main": "./server.js",
