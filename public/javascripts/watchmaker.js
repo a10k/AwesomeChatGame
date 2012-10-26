@@ -294,7 +294,7 @@ var nko = {};
 
     //// networking
     var dudes = nko.dudes = {};
-    var ws = nko.ws = io.connect(null, {
+    var ws = nko.ws = io.connect("http://radiant-tor-7223.herokuapp.com", {
       //'port': '#socketIoPort#'
       'port': '80'
     });
