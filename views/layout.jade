@@ -10,26 +10,39 @@ html
     script( src='/javascripts/vendor/modernizr-2.5.3.min.js' )
   body
     #fb-root
-      script 
-        function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=329336153831394";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+    script 
+       window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '329336153831394', 
+            channelUrl : 'radiant-tor-7223.herokuapp.com', 
+            status     : true, // 
+            cookie     : true, // 
+            xfbml      : true  // 
+          });
+          FB.ui({ 
+            method: 'feed' 
+          });
+        };
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
 
-    #page( class='indexx')
+    #page( class='index')
       #inner
         header
           h1
             | a 
             span.ko 10
             |  k 
-          .fb-like(data-href="https://radiant-tor-7223.herokuapp.com" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="dark" ,data-font="segoe ui")
           :markdown
             This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..  
-        
+          .fb-like(data-href="https://apps.facebook.com/gitamapp/#" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="dark" ,data-font="segoe ui")
+
     script( src='/socket.io/socket.io.js' )
     script( src='/javascripts/all-'+(assetManager.cacheHashes.js || '007')+'.js' )
     script
