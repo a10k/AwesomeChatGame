@@ -20,26 +20,17 @@
     "npm": "1.1.x"
   },
   "dependencies": {
-    "airbrake": "*",
     "coffee-script": "*",
     "colors": "*",
     "connect-assetmanager": "*",
-    "connect-redis": "*",
     "express": "*",
     "jade": "*",
     "marked": "*",
-    "mongoose": "*",
-    "mongoose-auth": "git://github.com/nko3/mongoose-auth.git#master",
-    "mongoose-types": "*",
-    "postageapp": "*",
-    "relative-date": "*",
     "request": "*",
     "socket.io": "*",
     "stylus": "*",
     "uglify-js": "*",
-    "underscore": "*",
-    "irc": "*",
-    "redis": "*"
+    "underscore": "*"
   },
   "devDependencies": {
     "nodemon": "0.6.18"
