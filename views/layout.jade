@@ -26,9 +26,9 @@ html
             | a 
             span.ko 10
             |  k 
-          div(class="fb-like", data-href="https://apps.facebook.com/gitamapp/#" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="dark" ,data-font="segoe ui")
-        :markdown
-         This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..  
+          .fb-like(data-href="https://radiant-tor-7223.herokuapp.com" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="dark" ,data-font="segoe ui")
+          :markdown
+            This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..  
         
     script( src='/socket.io/socket.io.js' )
     script( src='/javascripts/all-'+(assetManager.cacheHashes.js || '007')+'.js' )
