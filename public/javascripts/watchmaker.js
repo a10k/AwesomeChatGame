@@ -295,7 +295,8 @@ var nko = {};
     //// networking
     var dudes = nko.dudes = {};
     var ws = nko.ws = io.connect(null, {
-      'port': '#socketIoPort#'
+      //'port': '#socketIoPort#'
+      'port': '80'
     });
     ws.on('connect', function() {
       me.id = ws.socket.sessionid;

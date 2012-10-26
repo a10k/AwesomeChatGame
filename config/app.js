@@ -36,7 +36,6 @@ app.configure(function() {
       route: /\/javascripts\/all-[a-z0-9]+\.js/,
       path: __dirname + '/../public/javascripts/',
       dataType: 'javascript',
-      debug: node_env === 'development',
       preManipulate: {
         '^': [
           function(src, path, index, isLast, callback) {
