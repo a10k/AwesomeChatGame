@@ -126,9 +126,11 @@ app.ws = require('socket.io').listen(app);
 
 //added for heroku websocket support
   app.ws.set("transports", ["xhr-polling"]); 
-  app.ws.set("polling duration", 10); 
+  app.ws.set("polling duration", 100); 
 
 //removed two lines here
+app.ws.set('log level', 1);
+app.ws.set('browser client minification', true);
 
 
 app.on('listening', function() {
