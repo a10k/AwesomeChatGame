@@ -296,7 +296,7 @@ var nko = {};
     var dudes = nko.dudes = {};
     var ws = nko.ws = io.connect(null, {
       //'port': '#socketIoPort#'
-      'port': '80'
+      'port': 'http://radiant-tor-7223.herokuapp.com'
     });
     ws.on('connect', function() {
       me.id = ws.socket.sessionid;
