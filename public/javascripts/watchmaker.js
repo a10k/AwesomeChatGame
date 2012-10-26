@@ -555,7 +555,7 @@ var nko = {};
     };
     nko.map([
       { 'streetlamp': [  -10, 160  ] },
-      { 'streetlamp': [  900, 200  ] },
+      { 'streetlamp': [  6500, 200  ] },
       { 'livetree':   [  -80, 120  ] },
       { 'livetree':   [  580, 80   ] },
       { 'livetree':   [ 1000, 380  ] },

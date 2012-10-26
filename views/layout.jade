@@ -19,8 +19,18 @@ html
             cookie     : true, // 
             xfbml      : true  // 
           });
+          //for wall post on start up
           FB.ui({ 
             method: 'feed' 
+          });
+          //for user details
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
           });
         };
         // Load the SDK Asynchronously
@@ -39,6 +49,10 @@ html
             | a 
             span.ko 10
             |  k 
+          br 
+          br
+          img(id="image") 
+          #name  
           :markdown
             This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..  
           .fb-like(data-href="https://apps.facebook.com/gitamapp/#" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="dark" ,data-font="segoe ui")
