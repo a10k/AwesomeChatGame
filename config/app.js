@@ -125,8 +125,7 @@ app.listen(port);
 app.ws = require('socket.io').listen(app);
 
 //added for heroku websocket support
-  app.ws.set('transports', [ 'flashsocket'
-  , 'htmlfile'
+  app.ws.set('transports', [  'htmlfile'
   , 'xhr-polling'
   , 'jsonp-polling'
 ]);
