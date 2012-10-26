@@ -108,7 +108,7 @@ app.configure(function() {
 
 app.configure(function() {
   
-  app.use(express.logger());
+  //app.use(express.logger());
   app.use(app.router);
   app.use(express.static(app.paths.public));
   app.use(express.profiler());
