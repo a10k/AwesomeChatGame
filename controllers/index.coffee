@@ -4,7 +4,7 @@ fs = require 'fs'
 
 
 
-app.get '/', [], (req, res, next) ->
+app.all '/', [], (req, res, next) ->
   res.render2 'index/index.jade'
 
 
