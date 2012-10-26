@@ -125,8 +125,10 @@ app.listen(port);
 app.ws = require('socket.io').listen(app);
 
 //added for heroku websocket support
-  app.ws.set("transports", ["xhr-polling"]); 
-  app.ws.set("polling duration", 100000); 
+ app.ws.configure(function () {
+  app.ws.set("transports", ["xhr-polling"]);
+  app.ws.set("polling duration", 10);
+});
   app.ws.set('browser client minification', true);
 
 
