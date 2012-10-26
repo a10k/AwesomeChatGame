@@ -1,6 +1,6 @@
 var express = require('express')
   , util = require('util')
-  , port = 8003
+  , port = 7964
   , EventEmitter = require('events').EventEmitter;
 
 var node_env = 'development'
