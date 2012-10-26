@@ -1,6 +1,6 @@
 var express = require('express')
   , util = require('util')
-  , port = parseInt(process.env.PORT) || 8003
+  , port = parseInt(process.env.PORT) || 8080
   , EventEmitter = require('events').EventEmitter;
 
 var node_env = 'development'
@@ -128,8 +128,9 @@ app.ws = require('socket.io').listen(app);
  app.ws.configure(function () {
   app.ws.set("transports", ["xhr-polling"]);
   app.ws.set("polling duration", 10);
-});
   app.ws.set('browser client minification', true);
+});
+  
 
 
 app.on('listening', function() {
