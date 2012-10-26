@@ -1,0 +1,27 @@
+!!! 5
+html
+  head
+    meta( charset='utf-8' )
+    meta( http-equiv='X-UA-Compatible', content='IE=edge,chrome=1' )
+    meta( name='viewport', content='width=1024' )
+    title A10k chat engine !!
+   
+    link( rel='stylesheet', href='/stylesheets/all-'+(assetManager.cacheHashes.css || '007')+'.css' )
+    script( src='/javascripts/vendor/modernizr-2.5.3.min.js' )
+  body
+    #page( class='indexx')
+      #inner
+        header
+          h1
+            | a 
+            span.ko 10
+            |  k
+          
+        
+    script( src='/socket.io/socket.io.js' )
+    script( src='/javascripts/all-'+(assetManager.cacheHashes.js || '007')+'.js' )
+    script
+      $(function() {
+        if (nko.me)
+          nko.me.div.prop('title', null);
+      });

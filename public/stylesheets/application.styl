@@ -1,0 +1,1086 @@
+border-image()
+  -webkit-border-image arguments
+  -moz-border-image arguments
+  border-image arguments
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+box-shadow()
+  -webkit-box-shadow arguments
+  -moz-box-shadow arguments
+  box-shadow arguments
+
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+  transition arguments
+
+inverted()
+  padding 9px 13px 5px 23px
+  color white
+  background hsl(0, 0%, 20%)
+  background-color hsla(0, 0%, 0%, 0.8)
+  border solid 1px hsla(0, 0%, 0%, 0.2)
+  text-shadow 0px -1px 0px hsla(0, 0%, 0%, 0.5)
+  box-shadow 0 1px 3px hsla(0, 0%, 0%, 0.5)
+
+x-small = 10px
+small = 14px
+medium = 18px
+large = 24px
+x-large = 32px
+xx-large = 64px
+xxx-large = 88px
+
+red = hsl(0, 60%, 60%)
+
+@font-face
+  font-family "04b_03"
+  src url('/fonts/04b_03__-webfont.eot')
+  src url('/fonts/04b_03__-webfont.eot?iefix') format('eot'), url('/fonts/04b_03__-webfont.woff') format('woff'), url('/fonts/04b_03__-webfont.ttf') format('truetype'), url('/fonts/04b_03__-webfont.svg#webfontiFL0wwqh') format('svg')
+  font-weight normal
+  font-style normal
+  font-size medium
+
+time
+  display inline
+
+body, input, textarea, code, pre
+  font-family 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size medium
+
+h1, h2, h3, h4, h5, h6
+  font-family '04b_03', monospace
+  margin-bottom 0
+
+body
+  text-align center
+  background hsl(200, 10%, 80%) url('/images/noise.png') repeat
+  text-shadow 0px 1px 0px hsla(0, 100%, 100%, 0.6)
+  overflow scroll
+  min-width 1024px
+
+a:link, a:visited
+  color hsl(200, 30%, 50%)
+  text-decoration none
+  transition color 100ms linear
+  &:hover
+    text-decoration underline
+    color hsl(200, 30%, 60%)
+  &.scary
+    color red
+    &:hover
+      hsl(0, 60%, 50%)
+
+.scary
+  color red
+
+button, input[type=submit], a.button
+  font-family 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size large
+  font-weight normal
+  border solid 2px hsla(0, 0%, 0%, 0.1)
+  background-color hsl(200, 30%, 60%)
+  background hsl(200, 30%, 50%) -webkit-linear-gradient(-90deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1) 50%)
+  background hsl(200, 30%, 50%) -moz-linear-gradient(-90deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1) 50%)
+  color white !important
+  text-shadow 0 -1px 0 hsla(0, 0%, 0%, 0.5)
+  padding 5px 1ex
+  border-radius 3px
+  box-shadow inset 0 0 3px hsla(0, 0%, 0%, 0.2), 0 1px 1px hsla(0, 0%, 1000%, 0.7)
+  transition background-color 200ms linear
+  pointer none
+  white-space nowrap
+  &:hover
+    text-decoration none
+    background-color hsl(200, 35%, 60%)
+  &:active
+    box-shadow inset 0 0 10px hsla(0, 0%, 0%, 0.5)
+    background-color hsl(200, 30%, 35%)
+    transition none
+  &.scary
+    background-color red
+    &:hover
+      text-decoration none
+      background-color hsl(0, 80%, 60%)
+  &.heart
+    font-size 18px
+  &.loved
+    background-color red
+  &[disabled]
+    background-color gray
+    background-image none
+    &:active
+      box-shadow inherit
+
+input[type=text], input[type=email], input[type=password], textarea
+  outline none
+  font-size large
+  padding 2px 3px
+  border-radius 2px
+  border 2px solid #ddd
+  margin 3px 0
+  box-shadow inset 0 0 3px hsla(0, 0%, 0%, 0.1)
+  &:focus
+    border-color #bbb
+
+textarea
+  font-size medium
+  max-width 100%
+
+p, ul
+  margin 1em 0
+
+p, li, textarea
+  line-height 150%
+
+ul
+  list-style-type none
+  padding-left 0
+
+img.spinner
+  display none
+  width 16px
+  height 16px
+  margin 0px 2px
+
+img.heart
+  width 16px
+  height 16px
+  vertical-align middle
+
+img.avatar
+  vertical-align middle
+  margin 2px 5px 2px 0
+  border-radius 3px
+  width 30px
+  height 30px
+.via img
+  margin-bottom -3px
+  width 16px
+  height 16px
+
+ul.errors
+  color hsl(0, 60%, 60%)
+
+aside
+  display block
+  float right
+  width 260px
+  margin-top 20px
+  text-align center
+  .login
+    position relative
+    z-index 1000
+    text-align center
+    color hsl(0, 0%, 40%)
+    color hsla(0, 0%, 0%, 0.4)
+    a.button
+      font-size medium
+  table.important-dates
+    width 100%
+    border-collapse collapse
+    td
+      text-align center
+      text-align '-' center
+    th.asterisk
+      font-weight normal
+      font-size small
+      padding-top 1em
+  ul.sponsors
+    list-style-type none
+    margin 2em 0 0
+    padding 0
+    text-align center
+    li
+      margin-top -10px
+    // sponsor logo list: x-height = 20px; descender = 23px; ascender = 26px
+    for sponsor in adobe bislr blitz cloud9 cloudfoundry couchbase dropbox geeklist github heroku joyent linode maxcdn meebo mongohq mozilla ngmoco nodejitsu nodesocket postageapp pubnub pusher scopely sequoiacap spreecast sungard tapjoy tradeking tropo twilio
+      img.{sponsor}
+        width image-size('/images/sponsors/' + sponsor + '.png')[0]
+        height image-size('/images/sponsors/' + sponsor + '.png')[1]
+    for sponsor in sleepless summercamp
+      img.{sponsor}
+        width image-size('/images/sponsors/' + sponsor + '.gif')[0]
+        height image-size('/images/sponsors/' + sponsor + '.gif')[1]
+    li.interested
+      font-size small
+
+li.vote, div.vote
+  margin 1em 0
+  border solid 1px hsla(0, 0%, 0%, 0.1)
+  border-radius 2px
+  padding 10px
+  box-shadow inset 0 0 5px hsla(0, 0%, 0%, 0.1)
+  background-color hsla(0, 0%, 95%, 0.5)
+  clear left
+  overflow hidden
+  line-height 100%
+  list-style-type none
+  &.my
+    box-shadow inset 0 0 5px hsla(200, 30%, 50%, 0.2)
+    background-color hsla(200, 30%, 80%, 0.2)
+  .info
+    float left
+    width 140px
+    margin-right 10px
+    img.avatar
+      width 40px
+      height auto
+      vertical-align top
+      float left
+    > .change
+      clear left
+      font-size small
+      margin-top 1em
+      text-align center
+    .created-at
+      font-size x-small
+      display block
+      line-height 150%
+    &.team
+      .by
+        font-size small
+    &.person
+      line-height 125%
+      font-size small
+      .role, .created-at
+        margin-left 45px
+      .role
+        font-size x-small
+    &.hearts
+      font-size x-small
+  > table, > form > table, > .reply, > .people
+    width 405px
+    border-collapse collapse
+    margin-left 150px
+  .clear
+    clear both
+  .voter
+    text-align center
+    line-height 150%
+  div.stars
+    display inline-block
+    .star
+      display inline-block
+      width 16px
+      height 16px
+      background transparent url(/images/star.png) no-repeat 0 0
+      &.filled
+        background transparent url(/images/star.png) no-repeat 0 -16px
+  th
+    font-size small
+    text-align center
+  tr.stars td
+    text-align center
+    padding 0 5px
+  input[type=range]
+    width 100px
+  textarea
+    width 98%
+    height 9em
+  .comment p
+    margin 0.5em 0
+  ul.replies
+    border-top dotted 2px hsl(0, 0%, 80%)
+    margin 1em 0
+    font-size small
+    > li
+      overflow hidden
+      margin 1em 0
+    .info img.avatar
+      width 30px
+      margin-left 10px
+    p:first-child
+      margin-top 0
+    .body
+      margin-left 150px
+  .reply .toggle
+    text-align center
+    margin 0.5em 0
+    a.button
+      font-size small
+  form.reply
+    display none
+    textarea
+      font-size small
+    a.toggle-reply-form
+      display none
+form.vote
+  &.edit
+    .view
+      display none
+    .star
+      cursor pointer
+  &.view .edit
+    display none
+  .info h3
+    width 80px
+    margin-top 3px
+
+#page
+  position relative
+  width 900px
+  margin 30px auto 0
+  text-align left
+  #inner
+    background-color hsl(0, 0%, 98%)
+    background-color hsla(0, 0%, 100%, 0.9)
+    border solid 1px hsla(0, 0%, 0%, 0.1)
+    border-radius 2px
+    box-shadow 0 0 5px hsla(0, 0%, 0%, 0.1)
+    z-index 10000
+    position relative
+    padding 10px 20px
+    width 580px
+    transition color 100ms linear
+    &.pjax
+      color: hsla(0, 0%, 0%, 0.5)
+      a:link, a:visited
+        color hsla(200, 30%, 50%, 0.5)
+    header
+      text-align center
+      h1
+        font-size xx-large
+        word-spacing -0.5ex
+        a
+          color black !important
+          &:hover
+            text-decoration none
+        .ko
+          inverted()
+          border-radius 2px
+      nav
+        margin 1em 0
+        border-bottom dotted 2px hsl(0, 0%, 80%)
+        border-bottom dotted 2px hsla(0, 0%, 0%, 0.2)
+        width 600px
+        margin-left -10px
+        ul
+          margin 5px 0
+        li
+          display inline
+          margin 0 1ex
+    > h1, form > h1
+      inverted()
+      margin 0 0 0 -23px
+      padding-left 23px
+      display inline-block
+    footer
+      clear left
+      border-top dotted 2px hsl(0, 0%, 80%)
+      border-top dotted 2px hsla(0, 0%, 0%, 0.2)
+      font-size small
+      width 600px
+      margin-left -10px
+      margin-top 2em
+      color hsla(0, 0%, 0%, 0.3)
+      text-align center
+      ul
+        margin 5px 0
+      li
+        display inline
+        margin 0 1ex
+
+.thing
+  position absolute
+  font-family '04b_03'
+  .bubble
+    position absolute
+    left -15px
+    width 294px - 20px - 21px
+    max-height 133px - 21px - 42px
+    border-width 21px 20px 42px 21px
+    padding 5px
+    display none
+    text-align center
+    overflow-y auto
+    white-space pre-wrap
+    line-height 125%
+    &.frame-0
+      border-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAACFCAYAAAD2O1UuAAADKklEQVR4nO3dQU7bQBiGYRshhDhCSGCTU3TFucqmXcC5kKr2FFk1UY6AEEW4y0qVZqimsfmIn2drxXFIeDVS/ni6DgAAAAAAAACYmf69L+Bf7XfboXRssVw1vY797ufn8jmv7tvO2XadY7y+MdSus+uG29KR9r/n4d+j+vO1vn9jfJZyPp9TO3nvCwD4mzABcYQJiCNMQBxhAuIIExCn+evBzWbzqXTs4vzspvW8wMfy+PT8UDq2Xq9/tJzTigmII0xAHGEC4ggTEEeYgDjCBMQ5bX1gfSSgv2s9L/CxXJyfFe8qsd9tv5eO1e5mYMUExBEmII4wAXGECYgjTEAcYQLiNI8LALyldYMDKyYgjjABcYQJiCNMQBxhAuIIExCnOi5Q2zsdYCxWTEAcYQLiCBMQR5iAOMIExBEmIE7TL3+77q1RApsRwHwMxc0IWlkxAXGECYgjTEAcYQLiCBMQR5iAODYjAEazWF7dtzzOigmII0xAHGEC4ggTEEeYgDjCBMQRJiCOMAFxhAmII0xAHGEC4ggTEEeYgDjuLgCMprZpSe3OA1ZMQBxhAuIIExBHmIA4wgTEESYgTnVcYL/bDuWjh9+vHDguNiMAjoYwAXGECYgjTEAcYQLiCBMQpzousFiu+tKx2q+GAbquPnJU64sVExBHmIA4wgTEESYgjjABcYQJiGMzAmA0tZGAGismII4wAXGECYgjTEAcYQLiCBMQp3lc4OX15VvxpCenE29U0N9N+3xthuH1S+lY3/e/JrwUOJjHp+eHQ5/TigmII0xAHGEC4ggTEEeYgDjCBMRp+uXv/6htYtC6z3l9Y4RpRwlqIwGXq+uvh36+1pu9Jz3f1K8hyfTv3+H//8ZgxQTEESYgjjABcYQJiCNMQBxhAuIcxVexU48LTD0SkGTOX+0zHSsmII4wAXGECYgjTEAcYQLiCBMQp3kzgmM355GAGiMBTMGKCYgjTEAcYQLiCBMQR5iAOMIExJn1uICRAMhkxQTEESYgjjABcYQJiCNMQBxhAuLMYFxguC0duVxdx+zVDvxhxQTEESYgjjABcYQJiCNMQBxhAuL8BhzBl8gtRBW3AAAAAElFTkSuQmCC') 21 20 42 21 fill
+    &.frame-1
+      border-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAACFCAYAAAD2O1UuAAADPklEQVR4nO3dQUocQRiG4WkjIh5BndGFp3CVcylCEjHnEgI5hQtphzmCiDF2loFAV5JKT+Vz5nm2Bd1lCy8F89PdzbbYavkwjK0dHs+7lnsBftr53xsA+JUwAXGECYgjTEAcYQLiCBMQZ7f1Df1EP63Wz7Pv76/G1nZ33n1quZdarZ9Z7f1Kz3qxOL1uuZfWnJiAOMIExBEmII4wAXGECYgjTECc6p8H7+7uzsfWDvb33tdeF3hbHp+eb8fWzs7OvtZc04kJiCNMQBxhAuIIExBHmIA4wgTEqX67QHkkoLupvS7wthzs710Wlo0LAJtBmIA4wgTEESYgjjABcYQJiCNMQBxhAuIIExBHmIA4wgTEESYgjjABcarfLgDwO6vlwzC2dng8H/0YihMTEEeYgDjCBMQRJiCOMAFxhAmIUxwX6Pv7q8Ly94n3AmyY0khAiRMTEEeYgDjCBMQRJiCOMAFxhAmIUxwXWCxOr8fWVsv+YvrtADgxAYGECYgjTEAcYQLiCBMQR5iAOMIExBEmII4wAXGECYgjTEAcYQLiCBMQp/h2AYB/UfqgSentJU5MQBxhAuIIExBHmIA4wgTEESYgjnEBYG1KIwElTkxAHGEC4ggTEEeYgDjCBMQRJiBOcVxgtXwYxleHy6k3AzCbOTEBgYQJiCNMQBxhAuIIExBHmIA4xXGBw+N5N7a2WvYX028HwIkJCCRMQBxhAuIIExBHmIA4wgTEqf4Ywcvry5fRi+7sNn7zQHfT9n51huH1w9ha13XfGm4FJvP49Hw79TWdmIA4wgTEESYgjjABcYQJiCNMQJzRtwesS+kDB6W3GZSvWXrTQdtRgtJIwNH85GPDrcz6/v5qbK32m/Il6/jfJt2vZB3PuvbvS9pLLScmII4wAXGECYgjTEAcYQLiCBMQp/m4wDq0HhdIGglIkvTzPdMyLgBsPWEC4ggTEEeYgDjCBMQRJiBO9ccINp2RgL9nJGBztf7fOjEBcYQJiCNMQBxhAuIIExBHmIA4Wz0uYCQAMjkxAXGECYgjTEAcYQLiCBMQR5iAOFswLjBcjq0czU8+t9wJ8GecmIA4wgTEESYgjjABcYQJiCNMQJwfoCOV2xKEZXAAAAAASUVORK5CYII=') 21 20 42 21 fill
+    &.frame-2
+      border-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAACFCAYAAAD2O1UuAAADAklEQVR4nO3dQUocQRiAUUdExCNoJJs5RVY5V9wki+RcQiCncBXFI4gYcbIMBLoSOpn2m/G9bUF3O8hHQf8ztTog4e72ZjO1dvbmYrXks8BLO3zpBwD4nTABOcIE5AgTkCNMQI4wATlHS99w6dfi27jfvr/af82f2a4851y78vfZMQE5wgTkCBOQI0xAjjABOcIE5Mx+PXh9ff1uau305Pj93OsCu+X+4fFqam29Xn+bc007JiBHmIAcYQJyhAnIESYgR5iAnNm/LjAeCVh9nntdYLecnhxfDpaNCwD7QZiAHGECcoQJyBEmIEeYgBxhAnKECcgRJiBHmIAcYQJyhAnIESYgR5iAHGECcoQJyBEmIEeYgBxhAnKECciZfRgBwJ/c3d5sptbO3lysptbsmIAcYQJyhAnIESYgR5iAHGECco5Gr/PGNqPzygGGIwEjdkxAjjABOcIE5AgTkCNMQI4wATlHc1/n3d1+//C/HwbYL35dANgbwgTkCBOQI0xAjjABOcIE5DiMANgavy4A7A1hAnKECcgRJiBHmIAcYQJyhuMC44MKHEYAbIcdE5AjTECOMAE5wgTkCBOQI0xAznBcYPTNYIcRANtixwTkCBOQI0xAjjABOcIE5AgTkOMwAmBrRr9QMhpHsmMCcoQJyBEmIEeYgBxhAnKECciZPS7w9Pz0dfKih0cLH1Sw+rzs/ebZbJ4/Tq2tVqsfCz4K/Df3D49XU2vr9XpyJGDEjgnIESYgR5iAHGECcoQJyBEmIGfWq7x/MffbxuNrjg5GWHaUYDQScH7x9tOca27jMyvdb2lz/77t/O92PuvSs9gxATnCBOQIE5AjTECOMAE5wgTk7Pyr34OD5ccFtjESAPxixwTkCBOQI0xAjjABOcIE5AgTkDP7MIJ9ZyQAXo4dE5AjTECOMAE5wgTkCBOQI0xAzqseFzASAE12TECOMAE5wgTkCBOQI0xAjjABOa9gXGBzObVyfvH2y5JPAvwdOyYgR5iAHGECcoQJyBEmIEeYgJyf3UqNkrlpwhMAAAAASUVORK5CYII=') 21 20 42 21 fill
+  ::-webkit-scrollbar
+    width 1ex
+  ::-webkit-scrollbar-thumb:vertical
+    background-color hsla(0, 0%, 0%, 0.2)
+  .textarea-container
+    overflow hidden
+    position relative
+    textarea
+      position absolute
+      left -100px
+      width 80px
+
+#page.index-index #inner
+  header h1
+    font-size xxx-large !important
+    .ko
+      padding 10px 10px 0 25px !important
+  section
+    margin 2em 0px
+    p, ul
+      margin 0.5em 0
+    li
+      display inline-block
+      margin 0 1ex
+  > h4
+    margin 0
+  section.when
+    text-align center
+  .dates
+    font-size x-large
+    margin 0.25em 0px
+  a.register.button
+    font-size large
+  #countdown
+    display inline-block
+    font-weight bold
+
+#page.index-locations #inner
+  p#map iframe, img.map
+    border dotted 2px hsla(0, 0%, 0%, 0.2)
+  ul.locations
+    li
+      clear left
+      margin-bottom 1em
+      &.yay
+        box-shadow inset 0 0 5px hsla(200, 30%, 50%, 0.2)
+        background-color hsla(200, 30%, 80%, 0.2)
+        border-radius 2px
+        padding 2px 10px
+        margin 0 -10px
+    img.map
+      float left
+      margin 0 10px 1em 0
+    h3, h4, h5, p
+      margin 0.5em 0
+    h3, h5, p
+      margin-left 240px
+    h5
+      line-height 150%
+
+#page.index-how-to-win, #page.index-tell-me-a-story
+  text-align center
+  .slide
+    position absolute
+    width 800px
+    min-height 600px
+    overflow hidden
+    text-align left
+    font-size 200%
+    ul
+      list-style-type circle
+      padding-left 40px
+    li
+      margin 0.25em 0
+    .note
+      font-size 50%
+
+  // slide topology
+  //   0 1
+  // 4 3 2
+  // 5 8 9 10 11
+  // 6 7   13 12
+  //    15 14
+  .slide#slide-0
+    left 2000px
+    top 0px
+  .slide#slide-1
+    left 3000px
+    top 0px
+  .slide#slide-2
+    left 3000px
+    top 1000px
+  .slide#slide-3
+    left 2000px
+    top 1000px
+  .slide#slide-4
+    left 1000px
+    top 1000px
+  .slide#slide-5
+    left 1000px
+    top 2000px
+  .slide#slide-6
+    left 1000px
+    top 3000px
+  .slide#slide-7
+    left 2000px
+    top 3000px
+  .slide#slide-8
+    left 2000px
+    top 2000px
+  .slide#slide-9
+    left 3000px
+    top 2000px
+  .slide#slide-10
+    left 4000px
+    top 2000px
+  .slide#slide-11
+    left 5000px
+    top 2000px
+  .slide#slide-12
+    left 5000px
+    top 3000px
+  .slide#slide-13
+    left 4000px
+    top 3000px
+  .slide#slide-14
+    left 4000px
+    top 4000px
+  .slide#slide-15
+    left 3000px
+    top 4000px
+
+#page.index-about #inner
+  h3
+    margin 2em 0 0
+  table
+    border-collapse collapse
+    margin-top 1em
+    th, td
+      padding 0
+      line-height 150%
+    th
+      padding-right 2em
+
+#page.index-rules #inner
+  h3
+    margin 2em 0 0
+  > ul
+    list-style-type disc
+    padding-left 20px
+    li
+      margin 0.5em 0
+
+#page.teams-show, #page.people-show
+  #inner > div.edit
+    float right
+    margin-top 15px
+
+#page.teams-edit #inner, #page.people-edit #inner
+  form.delete
+    position absolute
+    display none
+    border solid 1px hsla(0, 0%, 0%, 0.1)
+    padding 10px 20px
+    border-radius 3px
+    box-shadow 0px 0px 5px hsla(0, 0%, 0%, 0.2)
+    background-color hsla(0, 0%, 100%, 0.9)
+    p
+      margin 0 0 0.5em
+    text-align center
+
+#page.teams-new #inner, #page.teams-edit #inner
+  textarea#description
+    width 90%
+    height 8em
+  ol
+    font-size large
+    margin 0.5em 0
+    input.email
+      width 16em
+    img
+      margin 4px 5px 4px 0
+#page.teams-max #inner
+  > ul
+    list-style-type disc
+    padding-left 20px
+    ul
+      margin 0.5em 0
+
+#page.teams-edit #entry
+  p.note
+    margin 0.5em 0
+  .votable, .technical
+    margin 1em 0px
+    .note
+      font-size small
+      font-style italic
+      margin-top 0.5em
+  textarea
+    width 98%
+    height 5em
+
+#page.teams-show #inner
+  h1 .secrets
+    text-align left
+    margin-top 0
+    &, & code
+      font-size x-small
+    label
+      color hsla(0, 0%, 100%, .5)
+  .secrets
+    font-family 'Droid Sans'
+    text-align center
+    margin-top 0.5em
+    label
+      color hsla(0, 0%, 0%, 0.5)
+      margin-right 1ex
+    code
+      margin-right 1em
+    &.pending label
+      color red
+  p.accept
+    text-align center
+    line-height 150%
+  p.sign-in
+    text-align center
+  ul.steps
+    text-align center
+    margin 1.25em 0 0
+    li
+      display inline-block
+      margin 0 1em
+      padding-left 18px
+      &.pending
+        background url('/images/cross.png') no-repeat 0 5px
+      &.done
+        background url('/images/tick.png') no-repeat 0 5px
+      a
+        padding-bottom 8px
+      a.selected
+        color black
+        background url('/images/spout.png') no-repeat center bottom
+  .step, .entry-info
+    box-shadow inset 0 0 5px hsla(0, 0%, 0%, 0.1)
+    background-color hsl(0, 0%, 95%)
+    background-color hsla(0, 0%, 95%, 0.5)
+    border-radius 2px
+  .step
+    padding 10px
+    margin-top 5px
+    display none
+    h2
+      margin-top 0
+      text-align center
+      font-size x-large
+      inverted()
+      box-shadow none
+      border-radius 2px
+      .details
+        font-size small
+        font-family 'Droid Sans', monospace
+        font-weight normal
+        a
+          color white
+      &.pending
+        background red url('/images/noise.png')
+      &.done
+        background green url('/images/noise.png')
+  .step.entry
+    text-align center
+    a.button
+      font-size medium
+      margin-left 0.25em
+  .step.deploy
+    ul
+      padding-left 20px
+      margin 0.5em 0
+      list-style-type disc
+    table
+      border-collapse collapse
+      th, td
+        padding 0
+      th
+        padding-right 1em
+  .step.votable
+    .buttons
+      text-align center
+  ul.people
+    line-height 200%
+
+#page.teams-show, #page.people-show
+  .entry-info
+    display block
+    margin-top 1em
+    overflow hidden
+    padding 20px
+    position relative
+    h2, h3, h4
+      margin-top 0px
+    img.screenshot
+      width 160px
+      height 93px
+      float left
+      margin-left -5px
+      margin-right 15px
+      border solid 2px hsl(0, 0%, 90%)
+      border solid 2px hsla(0, 0%, 0%, 0.1)
+      border-radius 2px
+    a.vote
+      margin 0.5em 0 0
+      display inline-block
+    .score
+      position absolute
+      top -2px
+      right 10px
+      inverted()
+      padding 10px 7px 6px 10px
+      text-align center
+      a
+        color white
+      h2
+        margin 0
+      .dimension
+        font-size x-small
+        line-height 100%
+    .clear
+      clear both
+
+#page.teams #inner
+  form.search
+    display inline-block
+    margin-left 1em
+    input
+      width 16em
+  ul.teams
+    overflow hidden
+    > li
+      clear both
+      border-top solid 1px hsla(0, 0%, 100%, 0.9)
+      border-bottom solid 1px hsla(0, 0%, 50%, 0.1)
+      overflow hidden
+      padding 20px 0 10px
+      &:first-child
+        border-top-color transparent
+      h3
+        float left
+        margin 0
+      div.members, .location, .description
+        font-size small
+      div.members
+        float right
+        text-align right
+        margin -3px 0 0
+      ul.members
+        margin 0
+        li
+          display inline-block
+          margin-left 5px
+        li.invites
+          color hsla(0, 0%, 0%, 0.6)
+          font-size x-small
+          font-style italic
+          margin-right 10px
+        img.avatar
+          margin 0
+      .location
+        clear left
+        font-style italic
+      .description
+        p, ul
+          margin 0.5em 0
+        img
+          display none
+        h1
+          font-size 1.5em
+  .more, #infscr-loading
+    text-align center
+    padding-top 1em
+
+#page.teams-entries #inner
+  form.search
+    display inline-block
+    margin-left 1em
+    input
+      width 16em
+  span.all
+    margin-left 1em
+  ul.sorts
+    font-size small
+    text-align center
+    li
+      display inline
+      margin-right 1ex
+      &.current
+        inverted()
+        padding 2px 5px
+        a
+          color white
+  ul.teams
+    overflow hidden
+    margin 0
+    > li
+      box-shadow inset 0 0 5px hsla(0, 0%, 0%, 0.1)
+      background-color hsl(0, 0%, 95%)
+      background-color hsla(0, 0%, 95%, 0.5)
+      padding 10px
+      border-radius 2px
+      margin-bottom 1em
+      padding 20px
+      position relative
+      h2, h3, h4, .description
+        margin-left 174px
+      h2, h3, h4
+        margin-top 0px
+      h2
+        margin-right 100px
+      img.screenshot
+        width 160px
+        height 93px
+        float left
+        margin-left -5px
+        margin-right 10px
+        border solid 2px hsl(0, 0%, 90%)
+        border solid 2px hsla(0, 0%, 0%, 0.1)
+        border-radius 2px
+      .description p
+        margin-bottom 0
+        font-size small
+      .clear
+        clear both
+      .score
+        position absolute
+        top -2px
+        right 10px
+        inverted()
+        padding 10px 7px 6px 10px
+        text-align center
+        a
+          color white
+        h3
+          margin 0
+        .dimension
+          font-size x-small
+          line-height 100%
+  .more, #infscr-loading
+    text-align center
+    padding-top 1em
+
+
+#page.people-show #inner
+  .avatar-and-role
+    float left
+    margin-right 10px
+    margin-bottom 20px
+    img.avatar
+      width 80px
+      height inherit
+    .role
+      text-align center
+      text-transform uppercase
+      font-size small
+  h1.name
+    margin-left 0
+    padding-left 19px
+  .details
+    margin-top 0.5em
+    .company, .company p, .icons
+      display inline
+    .icons a img
+      padding 0 2px
+      margin-bottom -2px
+  .team, .bio, .instructions
+    clear left
+  p.no-more-teams
+    text-align center
+  .next-vote
+    box-shadow inset 0 0 5px hsla(200, 30%, 50%, 0.2)
+    background-color hsla(200, 30%, 80%, 0.2)
+    padding 10px
+    .entry-info
+      margin 0 0 1em 0
+      img.screenshot
+        margin-left 0
+      .buttons
+        margin-top 15px
+      font-size small
+      padding 0
+    div.vote
+      box-shadow none
+      background-color transparent
+      border none
+      margin 0
+      padding 0
+    margin-bottom 1em
+    .skip-vote
+      display none
+
+#page.errors-404 #inner
+  .troll
+    text-align center
+
+#page.errors-500 #inner
+  code
+    display block
+    overflow scroll
+    white-space pre
+    border-radius 2px
+    border solid 1px hsla(0, 0%, 0%, 0.1)
+    background-color hsla(0, 0%, 0%, 0.1)
+    padding 2px
+    margin-left -3px
+    line-height 150%
+
+form.person
+  input[type=text], textarea
+    width 400px
+  .tabular
+    margin 10px 0
+    > label
+      display inline-block
+      margin-left 0
+      width 100px
+    > div
+      margin-left 100px
+  .note
+    font-size small
+  .role .technical
+    display none
+  .twitter
+    input[type=text]
+      width 200px
+      margin-left 0px
+    button, .running
+      display none
+      margin-left 1em
+      font-size x-small
+  .bio
+    label
+      vertical-align top
+      margin-top 7px
+    textarea
+      height 12em
+  .image_url
+    button
+      display none
+      font-size small
+    img.avatar
+      width 80px
+      height inherit
+    .transloadit
+      height 1px
+      width 1px
+      overflow hidden
+
+#page.judges-new form.person
+  .optional, .role
+    display none
+
+#page.judges-nominations li.judge span
+  font-size x-small
+
+#page.judges #inner
+  .nominate
+    margin-top 2em
+  ul.judges > li
+    margin-bottom 2em
+    > h3
+      padding-top 5px
+    > h3, > .details, > .bio
+      margin-left 90px
+    img.avatar
+      width 80px
+      margin-right 10px
+      height auto
+      float left
+    .details
+      .company, .company p, .icons
+        display inline
+      .icons a img
+        padding 0 2px
+        margin-bottom -2px
+
+#page.index-sponsors #inner
+  ul.sponsors li
+    clear left
+    margin 1.5em 0
+    img
+      float left
+      margin 0 15px -8px 0
+
+#page.index-prizes #inner
+  h2 + p
+    margin 0
+    color hsla(0, 0%, 0%, 0.6)
+  #twitter-widget-0
+    clear none !important
+    margin 2em auto !important
+
+#page.login #inner
+  text-align center
+  .via
+    font-size small
+    margin-top 5px
+  ul.options li
+    display inline-block
+    margin-right 1em
+    a.button
+      display inline-block
+      width 130px
+    .dude
+      width 80px
+      height 170px
+      margin-left 35px
+    .dude.beast
+      background url(/images/734m/beast.png) no-repeat -640px 40px
+    .dude.suit
+      background url(/images/734m/suit.png) no-repeat -640px 0
+    .dude.littleguy
+      background url(/images/734m/littleguy.png) no-repeat -640px 75px
+
+body.fullscreen
+  overflow hidden
+#page #inner.fullscreen
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  overflow auto
+  min-height 100%
+  width auto
+  padding-bottom 20px
+
+  .twitter-dashboard, .irc-dashboard
+    margin-top 10px
+
+  header, footer, h1
+    display none
+
+  #make-dashboard-fullscreen
+    margin-right 0
+    position absolute
+    top 10px
+    right 10px
+
+#page.index-scores #inner
+  h3
+    color red
+    margin 0.5em 0px !important
+  table
+    font-size small
+    font-weight normal
+    border-collapse collapse
+    table-layout fixed
+    td, th
+      margin 0px
+      width 12%
+      text-align right
+      padding 2px 0px
+      vertical-align bottom
+    th
+      font-size x-small
+      font-weight normal
+      overflow hidden
+      text-overflow ellipsis
+    th.teamName
+      font-weight bold
+      font-size small
+    tr.all, tr.unconfirmed
+      color #ccc
+    tr *:first-child
+      text-align left
+      width 15%
+    tr.final td
+      border-top 1px solid black
+      padding-bottom 1.5em
+    td.overall
+      font-weight bold
