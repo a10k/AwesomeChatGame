@@ -130,9 +130,8 @@ app.ws.configure(function () {
   app.ws.set("polling duration", 10); 
 });
 
-//
-app.ws.set('log level', 1);
-app.ws.set('browser client minification', true);
+//removed two lines here
+
 
 app.on('listening', function() {
   require('util').log('listening on ' + ('port:' + port).cyan);
