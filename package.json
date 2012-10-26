@@ -12,7 +12,8 @@
     "lib": "."
   },
   "engines": {
-    "node": "0.8.x"
+    "node": "0.8.x",
+    "npm" :  "1.1.x"
   },
   "dependencies": {
     "coffee-script": "*",
@@ -22,7 +23,7 @@
     "jade": "*",
     "marked": "*",
     "request": "*",
-    "socket.io": "*",
+    "socket.io": "0.9.10",
     "stylus": "*",
     "uglify-js": "*",
     "underscore": "*"
