@@ -11,7 +11,9 @@
   "directories": {
     "lib": "."
   },
-  
+  "engines": {
+    "node": "0.8.x"
+  },
   "dependencies": {
     "coffee-script": "*",
     "colors": "*",
