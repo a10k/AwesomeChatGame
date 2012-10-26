@@ -1,6 +1,6 @@
 var express = require('express')
   , util = require('util')
-  , port = 7964
+  , port = parseInt(process.env.PORT) || 8003
   , EventEmitter = require('events').EventEmitter;
 
 var node_env = 'development'
