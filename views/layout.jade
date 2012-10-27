@@ -14,7 +14,7 @@ html
        window.fbAsyncInit = function() {
           FB.init({
             appId      : '329336153831394', 
-            channelUrl : 'radiant-tor-7223.herokuapp.com', 
+            channelUrl : 'radiant-tor-7223.herokuapp.com/channel.html', 
             status     : true, 
             cookie     : true,  
             xfbml      : true   
@@ -24,6 +24,10 @@ html
             method: 'feed' 
           });
         };
+
+        FB.api('/me', function(response) {
+          alert('Your name is ' + response.name);
+        });
         
         // Load the SDK Asynchronously
         (function(d){
