@@ -547,6 +547,7 @@ var nko = {};
 
 
     //// flare
+    new nko.IdleThing({ name: 'fire', pos: new nko.Vector(2300, 360) });
     nko.map = function map(map) {
       $.each(map, function() {
         for (var name in this)
@@ -560,7 +561,6 @@ var nko = {};
       { 'livetree':   [  580, 80   ] },
       { 'livetree':   [ 1000, 380  ] },
       { 'deadtree':   [ 1050, 420  ] },
-
       //// lounge
       { 'livetree':   [  -60, 870  ] },
       { 'deadtree':   [    0, 900  ] },
