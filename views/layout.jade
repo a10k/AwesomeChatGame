@@ -19,7 +19,11 @@ html
             cookie     : true, // 
             xfbml      : true  // 
           });
-          //for user details
+          //alternate
+          FB.Event.subscribe('auth.sessionChange', function(user) {
+            alert(user);
+          if (user.session) {
+            //for user details
           FB.api('/me', function(user) {
             if (user) {
               var image = document.getElementById('image');
@@ -27,7 +31,12 @@ html
               var name = document.getElementById('name');
               name.innerHTML = user.name
             }
-          });
+           });
+ 
+           } else {
+            // The user has logged out, and the cookie has been cleared
+            }
+           });
           //for wall post on start up
           FB.ui({ 
             method: 'feed' 
