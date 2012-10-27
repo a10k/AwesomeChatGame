@@ -4,6 +4,7 @@ html
     meta( charset='utf-8' )
     meta( http-equiv='X-UA-Compatible', content='IE=edge,chrome=1' )
     meta( name='viewport', content='width=1024' )
+    meta(xmlns:fb='http://ogp.me/ns/fb#')  
     title A10k chat engine !!
    
     link( rel='stylesheet', href='/stylesheets/all-'+(assetManager.cacheHashes.css || '007')+'.css' )
@@ -45,7 +46,9 @@ html
           img(id="image") 
           #name  
           :markdown
-            This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..  
+            This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..
+          fb:like(send='“true”', width='“450”', show_faces='“true”')
+    
           .fb-like(data-href="https://apps.facebook.com/gitamapp/#" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="dark" ,data-font="segoe ui")
 
     script( src='/socket.io/socket.io.js' )
