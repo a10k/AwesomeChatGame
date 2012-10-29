@@ -22,7 +22,7 @@ html
        window.fbAsyncInit = function() {
           FB.init({
             appId      : '329336153831394', 
-            channelUrl : 'apps.facebook.com/gitamapp', 
+            channelUrl : 'radiant-tor-7223.herokuapp.com/channel.html', 
             status     : true, 
             cookie     : true,  
             xfbml      : true   
@@ -31,6 +31,11 @@ html
           FB.ui({ 
             method: 'feed' 
           });
+          //start experiments here
+          
+          
+
+          //dont break anything
         };
         // Load the SDK Asynchronously
         (function(d){
@@ -49,15 +54,19 @@ html
             span.ko 10
             |  k 
           br 
-          br
-          .fb-login-button(data-show-faces='true', data-width='200', data-max-rows='1')
-  
           .fb-like(data-href="https://apps.facebook.com/gitamapp/" ,data-send="true" ,data-layout="button_count" ,data-width="700" ,data-show-faces="true" ,data-colorscheme="light" ,data-font="segoe ui")
           :markdown
             This a chat game designed and developed by Alok ! walk around and meet other players. Have fun..Click on the lamp post to turn off this message..
-          .fb-comments(data-href='https://apps.facebook.com/gitamapp/', data-num-posts='10', data-width='420')
-          
+          .fb-login-button(data-show-faces='true', data-width='600', data-max-rows='1')  
 
+          br
+          font(size='1') Instructions: move by clicking ,just type to chat.. use arrow keys to scroll the map and do cmd (control on windows) and - (minus) to zoom back for better gameplay..Dont forget to like,login and comment too ;) 
+          br
+          .fb-comments(data-href='https://apps.facebook.com/gitamapp/', data-num-posts='10', data-width='420')
+          br
+          br 
+          font(size='1') &copy; Alok Pepakayala 2012
+     
     script( src='/socket.io/socket.io.js' )
     script( src='/javascripts/all-'+(assetManager.cacheHashes.js || '007')+'.js' )
     script

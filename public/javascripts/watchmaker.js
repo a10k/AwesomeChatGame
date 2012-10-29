@@ -559,7 +559,7 @@ var nko = {};
       { 'streetlamp': [  6500, 200  ] },
       { 'livetree':   [  -80, 120  ] },
       { 'livetree':   [  580, 80   ] },
-      { 'tri_tree':   [ 2600, 900  ] },
+      { 'tri_tree':   [ 2600, 1500  ] },
       { 'deadtree':   [ 1050, 420  ] },
       //// lounge
       { 'livetree':   [  -60, 870  ] },
@@ -567,11 +567,10 @@ var nko = {};
       { 'portopotty': [   80, 900  ] },
       { 'livetree':   [  550, 1050 ] },
       { 'livetree':   [  500, 1250 ] },
-      { 'deadtree':   [  560, 1300 ] },
-      { 'desk':       [  500, 1350 ] },
+      { 'temple':      [ 800, 1600 ] },
       { 'livetree':   [  120, 1800 ] },
       { 'deadtree':   [   70, 1700 ] },
-      { 'livetree':   [  -10, 1900 ] }
+      { 'livetree':   [  -10, 4000 ] }
     ]);
   });
 })(nko); // export nko
